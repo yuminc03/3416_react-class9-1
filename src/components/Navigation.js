@@ -5,10 +5,14 @@ import './Navigation.css';
 function Navigation(){
     return(
         <div className="nav">
+            {/* <a href="/">Home</a>
+            <a href="/about">About</a> 
+            a태그는 home에서 home을 눌러도 새로고침함*/}
             <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+            <Link to={{ pathname: "/about", 
+            state: {fromNavigation: true}}}>About</Link>
         </div>
-    )
+    );
 }
 
 export default Navigation;

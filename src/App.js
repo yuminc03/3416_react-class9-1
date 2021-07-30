@@ -2,16 +2,22 @@ import React from 'react';
 import { HashRouter, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import About from './routes/About';
-//import Navigation from './components/Navigation';
+import Navigation from './components/Navigation';
+import Detail from './routes/Detail';
 // import axios from 'axios';
 // import Movie from './Movie';
 import './App.css';
 
+//spa = single page application
 function App(){
   return(
     <HashRouter>
+      <Navigation/>
       <Route path="/" exact={true} component={Home}/>
-      <Route exact path="/about" component={About}/>
+      <Route path="/about" component={About}/>
+      {/* localhost:3000/#/about */}
+      <Route path="/detail" component={Detail}/>
+      {/* //#이 있으면 #이후만 해석할 수 있다, 적절하게 페이지를 연결한다 */}
     </HashRouter>
   );
 }
