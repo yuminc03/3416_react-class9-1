@@ -7,7 +7,7 @@ function Movie({ title, year, summary, poster, genres }) {
   return (
     <div className="movie">
 
-      <Link to={{pathname: '/detail', state: {fromNavigation: true}}}>
+      <Link to={{pathname: '/detail', state: { year, title, summary, poster, genres }}}>
 
         <img src={poster} alt={title} title={title} />
         {/* title: 그림위에 마우스 올리면 나타나는 글자 */}
